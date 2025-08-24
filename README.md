@@ -55,7 +55,7 @@ streamlit run app.py
 -   Text content (with special characters and Unicode)
 -   Images (extracted but not displayed)
 -   Tables and graphs (text extracted)
--   Mixed content documents
+-   Mixed content documents.
 
 ## Troubleshooting
 
