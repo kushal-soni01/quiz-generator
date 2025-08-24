@@ -670,7 +670,7 @@ CRITICAL REQUIREMENTS:
                 # Enhanced manual question extraction using multiple patterns
                 questions = []
                 
-                # Pattern 1: Improved question pattern that handles quotes better
+                # Pattern 000: Improved question pattern that handles quotes better
                 # Use non-greedy matching and better quote handling
                 question_pattern = r'"question":\s*"((?:[^"\\]|\\.)*)"\s*,.*?"type":\s*"([^"]+)"\s*,.*?"options":\s*\[(.*?)\].*?"correct_answer":\s*"([^"]+)"\s*,.*?"explanation":\s*"((?:[^"\\]|\\.)*)"'
                 matches = re.findall(question_pattern, response_text, re.DOTALL)
@@ -1328,13 +1328,13 @@ def main():
         uploaded_file = st.file_uploader(
             "Choose a PDF file",
             type="pdf",
-            help="Maximum file size: 100MB"
+            help="Maximum file size: 200MB"
         )
         
         if uploaded_file is not None:
-            # Check file size (100MB limit)
-            if uploaded_file.size > 100 * 1024 * 1024:
-                st.error("File size exceeds 100MB limit. Please upload a smaller file.")
+            # Check file size (200MB limit)
+            if uploaded_file.size > 200 * 1024 * 1024:
+                st.error("File size exceeds 200MB limit. Please upload a smaller file.")
             else:
                 st.success(f"File uploaded: {uploaded_file.name}")
                 
@@ -1460,7 +1460,7 @@ def main():
             # Preview area
             st.subheader("📖 How it works")
             st.markdown("""
-            1. **Upload PDF**: Choose your chapter or document (max 100MB)
+            1. **Upload PDF**: Choose your chapter or document (max 200MB)
             2. **Configure Quiz**: Select difficulty level and number of questions
             3. **Generate**: Gemini AI creates multiple-choice and true/false questions
             4. **Review**: Check generated questions with answer keys

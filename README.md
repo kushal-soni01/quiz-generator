@@ -45,7 +45,7 @@ streamlit run app.py
 
 ## Usage
 
-1. Upload a PDF file (max 100MB)
+1. Upload a PDF file (max 200MB)
 2. Choose difficulty level and number of questions
 3. Click "Generate Quiz from PDF"
 4. Review and export your questions
